@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/users",
+            "lambdaFunction": "testfunction",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/users"
+        }
+    ],
+    "resourceName": "userapi",
+    "apiName": "userapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "testfunction"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-subworld-dev-44102-authRole",
+        "unAuthRoleName": "amplify-subworld-dev-44102-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "testfunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

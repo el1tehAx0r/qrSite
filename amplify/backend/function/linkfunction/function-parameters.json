@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "auth": {
+      "subworldbcab77e1": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    },
+    "storage": {
+      "databse": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

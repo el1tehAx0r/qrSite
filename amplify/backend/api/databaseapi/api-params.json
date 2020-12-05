@@ -1,0 +1,45 @@
+{
+    "paths": [
+        {
+            "name": "/links",
+            "lambdaFunction": "linkfunction",
+            "privacy": {
+                "protected": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ],
+                "unauth": [
+                    "/GET"
+                ]
+            },
+            "policyResourceName": "/links"
+        }
+    ],
+    "resourceName": "databaseapi",
+    "apiName": "databaseapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "linkfunction"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 1,
+        "authRoleName": "amplify-subworld-dev-44102-authRole",
+        "unAuthRoleName": "amplify-subworld-dev-44102-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "linkfunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

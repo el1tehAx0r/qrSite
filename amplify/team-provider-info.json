@@ -1,0 +1,25 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-subworld-dev-44102-authRole",
+      "UnauthRoleArn": "arn:aws:iam::215321521347:role/amplify-subworld-dev-44102-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::215321521347:role/amplify-subworld-dev-44102-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-subworld-dev-44102-deployment",
+      "UnauthRoleName": "amplify-subworld-dev-44102-unauthRole",
+      "StackName": "amplify-subworld-dev-44102",
+      "StackId": "arn:aws:cloudformation:us-east-1:215321521347:stack/amplify-subworld-dev-44102/38768a10-3166-11eb-9d23-0a619e90e3eb",
+      "AmplifyAppId": "d3sb7ii9qv4tw8"
+    },
+    "categories": {
+      "function": {
+        "subworldbcab77e1PostConfirmation": {
+          "GROUP": "Admin"
+        }
+      },
+      "auth": {
+        "subworldbcab77e1": {}
+      }
+    }
+  }
+}
