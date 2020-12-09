@@ -9,7 +9,7 @@
       ]
     },
     "storage": {
-      "databse": [
+      "producttable": [
         "create",
         "read",
         "update",

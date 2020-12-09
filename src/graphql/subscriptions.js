@@ -1,42 +1,180 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateNote = /* GraphQL */ `
-  subscription OnCreateNote {
-    onCreateNote {
+export const onCreateMessage = /* GraphQL */ `
+  subscription OnCreateMessage {
+    onCreateMessage {
       id
-      clientId
-      name
-      completed
-      description
+      title
+      color
+      image
       createdAt
+      _version
+      _deleted
+      _lastChangedAt
       updatedAt
     }
   }
 `;
-export const onUpdateNote = /* GraphQL */ `
-  subscription OnUpdateNote {
-    onUpdateNote {
+export const onUpdateMessage = /* GraphQL */ `
+  subscription OnUpdateMessage {
+    onUpdateMessage {
       id
-      clientId
-      name
-      completed
-      description
+      title
+      color
+      image
       createdAt
+      _version
+      _deleted
+      _lastChangedAt
       updatedAt
     }
   }
 `;
-export const onDeleteNote = /* GraphQL */ `
-  subscription OnDeleteNote {
-    onDeleteNote {
+export const onDeleteMessage = /* GraphQL */ `
+  subscription OnDeleteMessage {
+    onDeleteMessage {
       id
-      clientId
+      title
+      color
+      image
+      createdAt
+      _version
+      _deleted
+      _lastChangedAt
+      updatedAt
+    }
+  }
+`;
+export const onCreateStage = /* GraphQL */ `
+  subscription OnCreateStage {
+    onCreateStage {
+      id
       name
-      completed
-      description
+      _version
+      _deleted
+      _lastChangedAt
       createdAt
       updatedAt
+      performances {
+        nextToken
+        startedAt
+      }
+    }
+  }
+`;
+export const onUpdateStage = /* GraphQL */ `
+  subscription OnUpdateStage {
+    onUpdateStage {
+      id
+      name
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+      performances {
+        nextToken
+        startedAt
+      }
+    }
+  }
+`;
+export const onDeleteStage = /* GraphQL */ `
+  subscription OnDeleteStage {
+    onDeleteStage {
+      id
+      name
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+      performances {
+        nextToken
+        startedAt
+      }
+    }
+  }
+`;
+export const onCreatePerformance = /* GraphQL */ `
+  subscription OnCreatePerformance {
+    onCreatePerformance {
+      id
+      performanceStageId
+      productID
+      performer
+      imageUrl
+      description
+      time
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+      stage {
+        id
+        name
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+    }
+  }
+`;
+export const onUpdatePerformance = /* GraphQL */ `
+  subscription OnUpdatePerformance {
+    onUpdatePerformance {
+      id
+      performanceStageId
+      productID
+      performer
+      imageUrl
+      description
+      time
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+      stage {
+        id
+        name
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+    }
+  }
+`;
+export const onDeletePerformance = /* GraphQL */ `
+  subscription OnDeletePerformance {
+    onDeletePerformance {
+      id
+      performanceStageId
+      productID
+      performer
+      imageUrl
+      description
+      time
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+      stage {
+        id
+        name
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
     }
   }
 `;

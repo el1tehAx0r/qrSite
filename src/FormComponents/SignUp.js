@@ -24,6 +24,12 @@ function SignUp({ updateFormState, signUp }) {
  style={formStyles.input}
  placeholder='email'
  />
+ <input
+ name='phone_number'
+ onChange={e => {e.persist();updateFormState(e)}}
+ style={formStyles.input}
+ placeholder='phone_number'
+ />
  <Button onClick={signUp} title="Sign Up" />
  </div>
  )

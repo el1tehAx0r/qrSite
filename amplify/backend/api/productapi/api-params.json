@@ -1,8 +1,8 @@
 {
     "paths": [
         {
-            "name": "/links",
-            "lambdaFunction": "linkfunction",
+            "name": "/product",
+            "lambdaFunction": "productfunction",
             "privacy": {
                 "protected": true,
                 "auth": [
@@ -16,14 +16,14 @@
                     "/GET"
                 ]
             },
-            "policyResourceName": "/links"
+            "policyResourceName": "/product"
         }
     ],
-    "resourceName": "databaseapi",
-    "apiName": "databaseapi",
+    "resourceName": "productapi",
+    "apiName": "productapi",
     "functionArns": [
         {
-            "lambdaFunction": "linkfunction"
+            "lambdaFunction": "productfunction"
         }
     ],
     "privacy": {
@@ -35,7 +35,7 @@
     "dependsOn": [
         {
             "category": "function",
-            "resourceName": "linkfunction",
+            "resourceName": "productfunction",
             "attributes": [
                 "Name",
                 "Arn"

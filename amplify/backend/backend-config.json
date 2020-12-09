@@ -28,7 +28,7 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
-    "linkfunction": {
+    "productfunction": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda",
@@ -42,7 +42,7 @@
         },
         {
           "category": "storage",
-          "resourceName": "databse",
+          "resourceName": "producttable",
           "attributes": [
             "Name",
             "Arn"
@@ -82,23 +82,46 @@
         }
       }
     },
-    "databaseapi": {
+    "productapi": {
       "service": "API Gateway",
       "providerPlugin": "awscloudformation",
       "dependsOn": [
         {
           "category": "function",
-          "resourceName": "linkfunction",
+          "resourceName": "productfunction",
           "attributes": [
             "Name",
             "Arn"
           ]
         }
       ]
+    },
+    "festivalapi": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authsubworldbcab77e1"
+            }
+          },
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "API_KEY",
+              "apiKeyConfig": {
+                "apiKeyExpirationDays": 365,
+                "description": "public"
+              }
+            }
+          ]
+        }
+      }
     }
   },
   "storage": {
-    "databse": {
+    "producttable": {
       "service": "DynamoDB",
       "providerPlugin": "awscloudformation"
     }

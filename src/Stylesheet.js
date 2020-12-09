@@ -52,5 +52,8 @@ const formStyles={
  cursor: 'pointer'
  }
 }
-export {formStyles};
+const containerStyle = { width: 400, margin: '20px auto' }
+const inputStyle = { marginTop: 10 }
+const buttonStyle = { marginTop: 10 }
+export {formStyles,containerStyle,inputStyle,buttonStyle};
 export default styles;

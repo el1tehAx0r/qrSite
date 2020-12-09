@@ -14,13 +14,13 @@
       "Type": "String",
       "Default": "authsubworldbcab77e1UserPoolId"
     },
-    "storagedatabseName": {
+    "storageproducttableName": {
       "Type": "String",
-      "Default": "storagedatabseName"
+      "Default": "storageproducttableName"
     },
-    "storagedatabseArn": {
+    "storageproducttableArn": {
       "Type": "String",
-      "Default": "storagedatabseArn"
+      "Default": "storageproducttableArn"
     }
   },
   "Conditions": {
@@ -45,12 +45,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "linkfunction",
+            "productfunction",
             {
               "Fn::Join": [
                 "",
                 [
-                  "linkfunction",
+                  "productfunction",
                   "-",
                   {
                     "Ref": "env"
@@ -71,11 +71,11 @@
             "AUTH_SUBWORLDBCAB77E1_USERPOOLID": {
               "Ref": "authsubworldbcab77e1UserPoolId"
             },
-            "STORAGE_DATABSE_NAME": {
-              "Ref": "storagedatabseName"
+            "STORAGE_PRODUCTTABLE_NAME": {
+              "Ref": "storageproducttableName"
             },
-            "STORAGE_DATABSE_ARN": {
-              "Ref": "storagedatabseArn"
+            "STORAGE_PRODUCTTABLE_ARN": {
+              "Ref": "storageproducttableArn"
             }
           }
         },
@@ -90,7 +90,7 @@
         "Timeout": "25",
         "Code": {
           "S3Bucket": "amplify-subworld-dev-44102-deployment",
-          "S3Key": "amplify-builds/linkfunction-6c564233664f74573244-build.zip"
+          "S3Key": "amplify-builds/productfunction-464976414d7538535159-build.zip"
         }
       }
     },
@@ -100,12 +100,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "subworldLambdaRoleb5bc67f1",
+            "subworldLambdaRoledbb91a1c",
             {
               "Fn::Join": [
                 "",
                 [
-                  "subworldLambdaRoleb5bc67f1",
+                  "subworldLambdaRoledbb91a1c",
                   "-",
                   {
                     "Ref": "env"
@@ -316,14 +316,14 @@
               ],
               "Resource": [
                 {
-                  "Ref": "storagedatabseArn"
+                  "Ref": "storageproducttableArn"
                 },
                 {
                   "Fn::Join": [
                     "/",
                     [
                       {
-                        "Ref": "storagedatabseArn"
+                        "Ref": "storageproducttableArn"
                       },
                       "index/*"
                     ]

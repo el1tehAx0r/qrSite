@@ -7,7 +7,7 @@ import ForgotPassword from './FormComponents/ForgotPassword'
 import ForgotPasswordSubmit from './FormComponents/ForgotPasswordSubmit'
 import {formStyles}  from './Stylesheet'
 const initialFormState={
-  username:'',password:'',email:'',confirmationCode:''
+  username:'',password:'',email:'',confirmationCode:'',phone_number:'',
 }
 function Form(props){
   const [formType,setFormType]=useState('signIn')
@@ -27,12 +27,13 @@ function Form(props){
       console.log('error signing in', error)
     }
   }
-  async function signUp({username,password,email},setFormType){
+  async function signUp({username,password,email,phone_number},setFormType){
     try {
       await Auth.signUp({
         username,
         password,
         attributes: {
+          phone_number,
           email}
         });
         setFormType('confirmSignUp')
