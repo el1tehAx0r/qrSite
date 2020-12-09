@@ -20,6 +20,7 @@ const cognito = new
 AWS.CognitoIdentityServiceProvider({
 	 apiVersion: '2016-04-18'
 })
+//
 var userpoolId = process.env.AUTH_SUBWORLDBCAB77E1_USERPOOLID
 const region = process.env.REGION
 const ddb_table_name = process.env.STORAGE_PRODUCTTABLE_NAME
